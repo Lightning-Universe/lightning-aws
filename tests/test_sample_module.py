@@ -1,6 +1,6 @@
 import pytest
 
-from pl_sandbox.my_module import my_sample_func
+from lightning_aws.my_module import my_sample_func
 
 
 @pytest.mark.parametrize(
