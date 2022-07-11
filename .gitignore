@@ -117,3 +117,5 @@ lightning_logs
 *.gz
 .DS_Store
 .*_submit.py
+node_modules
+.serverless

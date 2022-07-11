@@ -1,0 +1,26 @@
+service: lambda-server
+
+plugins:
+  - serverless-python-requirements
+
+package:
+  individually: false
+  exclude:
+    - '**/*'
+  include:
+    - app.py
+
+custom:
+  pythonRequirements:
+    layer: true
+
+provider:
+  name: aws
+  runtime: python3.9
+
+functions:
+  hello:
+    handler: app.handler
+    url: true
+    layers:
+      - Ref: PythonRequirementsLambdaLayer
